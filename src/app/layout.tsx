@@ -1,3 +1,4 @@
+import { ReactQueryClientProvider } from '@/components/molecules/ReactQueryClientProvider'
 import { ThemeProvider } from '@/components/molecules/ThemeProvider'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
@@ -35,7 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         </ThemeProvider>
       </body>
     </html>
